@@ -9,16 +9,16 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 排序##冒泡排序:     var arr=[2,5,3,1,7,8,6,9];    function sort(arr){    var len=arr.length;    for (var i=0;iarr[j+1]) {               var swap = arr[j+1];               arr[j+1] = arr[j];">
+  <meta name="description" content="title: 排序#冒泡排序:     var arr=[2,5,3,1,7,8,6,9];    function sort(arr){    var len=arr.length;    for (var i=0;iarr[j+1]) {               var swap = arr[j+1];               arr[j+1] = arr[j];">
 <meta property="og:type" content="article">
 <meta property="og:title" content="too young too simple sometimes native">
 <meta property="og:url" content="http://Mdzza.github.io/2017/05/29/排序/index.html">
 <meta property="og:site_name" content="too young too simple sometimes native">
-<meta property="og:description" content="title: 排序##冒泡排序:     var arr=[2,5,3,1,7,8,6,9];    function sort(arr){    var len=arr.length;    for (var i=0;iarr[j+1]) {               var swap = arr[j+1];               arr[j+1] = arr[j];">
-<meta property="og:updated_time" content="2017-05-29T14:39:10.652Z">
+<meta property="og:description" content="title: 排序#冒泡排序:     var arr=[2,5,3,1,7,8,6,9];    function sort(arr){    var len=arr.length;    for (var i=0;iarr[j+1]) {               var swap = arr[j+1];               arr[j+1] = arr[j];">
+<meta property="og:updated_time" content="2017-05-29T14:40:53.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="too young too simple sometimes native">
-<meta name="twitter:description" content="title: 排序##冒泡排序:     var arr=[2,5,3,1,7,8,6,9];    function sort(arr){    var len=arr.length;    for (var i=0;iarr[j+1]) {               var swap = arr[j+1];               arr[j+1] = arr[j];">
+<meta name="twitter:description" content="title: 排序#冒泡排序:     var arr=[2,5,3,1,7,8,6,9];    function sort(arr){    var len=arr.length;    for (var i=0;iarr[j+1]) {               var swap = arr[j+1];               arr[j+1] = arr[j];">
   
     <link rel="alternative" href="/atom.xml" title="too young too simple sometimes native" type="application/atom+xml">
   
@@ -180,7 +180,7 @@
   
     <div class="article-meta">
       <a href="/2017/05/29/排序/" class="article-date">
-  	<time datetime="2017-05-29T14:34:06.781Z" itemprop="datePublished">2017-05-29</time>
+  	<time datetime="2017-05-29T14:40:30.670Z" itemprop="datePublished">2017-05-29</time>
 </a>
     </div>
   
@@ -190,9 +190,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="title-排序"><a href="#title-排序" class="headerlink" title="title: 排序"></a>title: 排序</h2><p>##冒泡排序:<br>     var arr=[2,5,3,1,7,8,6,9];<br>    function sort(arr){<br>    var len=arr.length;<br>    for (var i=0;i<len;i++){ for(var="" j="0;j<len-i-1;j++){" if(arr[j]="">arr[j+1]) {<br>               var swap = arr[j+1];<br>               arr[j+1] = arr[j];<br>               arr[j] = swap;<br>           }<br>            console.log(i);<br>        }<br>    }<br>    console.log(arr);<br>}<br>     sort(arr);<br>    console.log(arr);<br>冒泡排序是要依靠两层循环，外层控制次数，内层逐个比较。第一次外层循环将最大（最小）的值放到最上面（数组最后面）；</len;i++){></p>
+<h2 id="title-排序"><a href="#title-排序" class="headerlink" title="title: 排序"></a>title: 排序</h2><p>#冒泡排序:<br>     var arr=[2,5,3,1,7,8,6,9];<br>    function sort(arr){<br>    var len=arr.length;<br>    for (var i=0;i<len;i++){ for(var="" j="0;j<len-i-1;j++){" if(arr[j]="">arr[j+1]) {<br>               var swap = arr[j+1];<br>               arr[j+1] = arr[j];<br>               arr[j] = swap;<br>           }<br>            console.log(i);<br>        }<br>    }<br>    console.log(arr);<br>}<br>     sort(arr);<br>    console.log(arr);<br>冒泡排序是要依靠两层循环，外层控制次数，内层逐个比较。第一次外层循环将最大（最小）的值放到最上面（数组最后面）；</len;i++){></p>
 <p>第二次外层循环把第二大（小）的值放到从上往下第2个位置：（数组最后一个）那么，每一次外层循环，内层的循环只需要循环从1到总长度减外层次数的长度，这就是：for(int j=0;j&lt;arr.length-i-1;j++) 这一行的意义；然后实现把最大（最小）的值放到最后面的方法是挨着的两个数依次做判断。</p>
-<p>这就是：<br>if(arr[j]&lt;arr[j+1]) 这一行的意义；如果当前值比后面的一个值小，则两个值交换位置。<br>你的这个排序是要把最小的放到最后面，也就是从大到小的排序。<br>我估计你对边界：j&lt;arr.length-i-1;会不解，为什么-i之后还要-1呢？<br>这是因为在下面的判断里面你是把当前值和后面一个值做比较的。如果不减1，则当循环到最后一个值的时候，再取下一个值就取不到，就需要额外的操作，或者抛出数组下标越界的异常。</p>
+<p>这就是：<br>if(arr[j]&lt;arr[j+1]) 这一行的意义；如果当前值比后面的一个值小，则两个值交换位置。<br>你的这个排序是要把最小的放到最后面，也就是从大到小的排序。<br>我估计你对边界：j&lt;arr.length-i-1;会不解，为什么-i之后还要-1呢？<br>这是因为在下面的判断里面你是把当前值和后面一个值做比较的。如果不减1，则当循环到最后一个值的时候，再取下一个值就取不到，就需要额外的操作，或者抛出数组下标。</p>
 
       
     </div>
@@ -201,6 +201,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/05/29/mysql/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
     <a href="/2017/05/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
